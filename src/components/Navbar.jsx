@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+  const { dark, setDark } = useContext(ThemeContext);
   return (
     <header className="topbar glass">
       <div className="brand">
@@ -14,6 +15,9 @@ export default function Navbar() {
       <nav className="topbar-nav">
         <Link to="/">Home</Link>
         <Link to="/create">Create Post</Link>
+        <button className="btn btn-theme" onClick={() => setDark(!dark)}>
+          {dark ? "Light" : "Dark"}
+        </button>
       </nav>
     </header>
   );
