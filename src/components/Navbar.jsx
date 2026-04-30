@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 export default function Navbar() {
   const { dark, setDark } = useContext(ThemeContext);
+
   return (
     <header className="topbar glass">
       <div className="brand">
